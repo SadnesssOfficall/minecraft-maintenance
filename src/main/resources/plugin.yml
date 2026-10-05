@@ -1,0 +1,24 @@
+name: Maintenance
+version: ${project.version}
+main: net.sadness.maintenance.plugin.MaintenancePlugin
+api-version: '1.20'
+description: ${project.description}
+website: ${project.url}
+authors: [Sadness]
+
+commands:
+  maintenance:
+    description: Manage the server maintenance mode
+    usage: /<command> <on [duration]|off|status|reload|whitelist>
+    aliases: [maint]
+
+permissions:
+  maintenance.manage:
+    description: Allows enabling, disabling and inspecting maintenance mode and managing its whitelist
+    default: op
+  maintenance.bypass:
+    description: Allows joining and staying on the server during maintenance
+    default: op
+  maintenance.reload:
+    description: Allows reloading the configuration
+    default: op
